@@ -14,8 +14,7 @@ export const auth = getAuth(app);
 
 const googleProvider = new GoogleAuthProvider();
 
-// Add Gmail scopes for email sending
-googleProvider.addScope('https://www.googleapis.com/auth/gmail.send');
+// ONLY request basic profile scopes (remove Gmail scopes)
 googleProvider.addScope('https://www.googleapis.com/auth/userinfo.email');
 googleProvider.addScope('https://www.googleapis.com/auth/userinfo.profile');
 
